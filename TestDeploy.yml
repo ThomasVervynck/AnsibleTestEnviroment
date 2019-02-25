@@ -1,0 +1,14 @@
+- name: Create a VM with managed disk
+  azure_rm_virtualmachine:
+    resource_group: RG_VervynckT_Stagair
+    name: TowerDeploy
+    vm_size: Standard_DS1_v2
+    admin_username: adminUser
+    ssh_public_keys:
+      - path: /home/adminUser/.ssh/authorized_keys
+        key_data: ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAvrQ0VFbtUyjlhYuH0OdnOQwK9L/hZVjFctqzxkENc8T0q/QcFCAyC1A0lI4sRfHmiy6wRmqG0uOjHxEIQAs9aY7guNaje6sVkVREzRb9chvLsfcEreJvpDEDQ4Hd2ttstl/tOgPDJOeRzjkWsvIYcJajfieGWT1lO1P0qO4bKZNVSssDCHQrpMq0YNB1pDJJRT5W0rbBC3k4xavYaM6KntHnFf/rIGamBSzj+ILnsGPsi/iBqS4IomcnxTuLyg6FQwe6MrQYVLKmTHiRiYSDGd+sl8+PRwKC4jyC3ACNce+cYHZey3eSSurnoay41rsuSG/qDHIbw5rvJkflaNiAGQ== rsa-key-20190222
+    image:
+      offer: CentOS
+      publisher: OpenLogic
+      sku: '7.5'
+      version: latest
