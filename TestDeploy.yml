@@ -1,6 +1,5 @@
 - name: Create Azure VM
-  hosts: localhost
-  connection: local
+  hosts: all
   tasks:
   - name: Create virtual network
     azure_rm_virtualnetwork:
